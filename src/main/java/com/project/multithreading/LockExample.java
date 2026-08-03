@@ -79,8 +79,10 @@ class Bank {
 * - tryLock with time - if area is not available then will wait for specified time, if during that time the lock can not be acquired then it if return false
 * - unlock - Always unlock in finally
 * - lock - same as synchronized
-* - ReenterentLock - Thread who has acquired the lock, lock again and will require to call unlock same number of times, i.e each lock should be paired with unlock, and unlock order also matters otherwise lock may get release earlier
-* - lockInterruptibl - lock which can be interrupted
+* - ReentrantLock - Thread who has acquired the lock, lock again and will require to call unlock same number of times, i.e each lock should be paired with unlock, and unlock order also matters otherwise lock may get release earlier
+* - lockInterruptible - lock which can be interrupted
 * - fairness - by default ReentrantLocks are unfair i.e. if t1,t2,t,3 request lock then it is not gurrented that lock will assigned in the same order as it was requested, to make it fair - pass true as constructor arg new ReentrantLocks(true)
 *   - calling start does not mean lock is requested, start order can be different and based on lock request order, lock will be provided
+*   - it also make sure of preventing the starvation
+*   - issues with synchronized - fairness, indefinite wait, interoperability, read/write locking
 * */
