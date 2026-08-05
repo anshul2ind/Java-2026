@@ -50,6 +50,7 @@ public class ArrayListExample {
         System.out.println(l4);
         list.sort(null);
         System.out.println(list);
+        list.removeAll(new ArrayList<>());
 
     }
 }
