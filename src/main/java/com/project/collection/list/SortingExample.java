@@ -37,6 +37,8 @@ public class SortingExample {
         studList.add(new Student("Shyam", 4.3));
         studList.add(new Student("Bob", 3.5));
         studList.add(new Student("Ram", 4.3));
+        studList.sort(null);
+        System.out.println(studList);
         studList.add(new Student("Charlie", 2.8));
         var studList2 = new ArrayList<Student>(studList);
 

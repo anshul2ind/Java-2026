@@ -1,6 +1,6 @@
 package com.project.collection.list;
 
-public class Student {
+public class Student implements Comparable<Student> {
     private String name;
     private double gpa;
     public Student(String name, double gpa) {
@@ -22,5 +22,10 @@ public class Student {
                 "name='" + name + '\'' +
                 ", gpa=" + gpa +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Student b) {
+        return Double.compare(b.getGpa(), this.getGpa());
     }
 }
