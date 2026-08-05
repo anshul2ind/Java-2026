@@ -96,6 +96,8 @@ class Person {
 * HashMap - Notes
 *  - get(key) - if key is not present then null is returned
 *  - getOrDefault(key, defaultValue) - if key is not present then defaultValue is returned
+*  - putIfAbsent(key, value) - put only if key is already not present
+*  - putAll - for multiple entries
 *  - containsKey(key) - returns boolean value for key existence
 *  - containsValue(value) - returns boolean value for value existence
 *  - remove(key) - removes by key, returns value of remove entry
