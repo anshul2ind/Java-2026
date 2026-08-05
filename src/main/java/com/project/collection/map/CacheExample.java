@@ -18,7 +18,7 @@ public class CacheExample {
 
         cache.putAll(Map.of("1", "1", "2", "2", "3", "3", "4", "4"));
         System.out.println(cache);
-        
+
     }
 }
 
